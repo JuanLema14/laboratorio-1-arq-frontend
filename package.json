@@ -1,0 +1,31 @@
+{
+  "name": "mi_banco_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.2.5",
+    "axios": "^1.8.4",
+    "framer-motion": "^12.7.3",
+    "mi_banco_frontend": "file:",
+    "next": "15.2.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-toastify": "^11.0.5",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@iconify/react": "^5.2.1",
+    "@tailwindcss/postcss": "^4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "tailwindcss": "^4.1.4"
+  }
+}
