@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+.gradient {
+  @apply bg-linear-to-tr from-[#2AB6D9] to-[#33D35E];
+}
+
+@theme {
+  --color-primary: #2bbacf;
+  --color-secondary: #22a4ad;
+  --color-gris: #9597a5;
+}
