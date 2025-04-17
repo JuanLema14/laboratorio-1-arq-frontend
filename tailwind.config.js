@@ -12,6 +12,7 @@ module.exports = {
         primary: "#2bbacf",
         secondary: "#22a4ad",
         gris: "#9597A5",
+        fondo: "#f3f4f9",
       },
     },
   },

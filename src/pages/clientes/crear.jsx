@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useClientesStore } from "@/stores/useClientesStore";
 import FormularioCliente from "@/components/frames/FormularioCliente";
+import { ToastContainer } from "react-toastify";
 
 export default function CrearCliente() {
   const router = useRouter();
@@ -25,7 +26,8 @@ export default function CrearCliente() {
   };
 
   return (
-    <div className="bg-gray-100 w-full px-4 py-8">
+    <div className="p-8">
+      <ToastContainer />
       <FormularioCliente
         cliente={cliente}
         onChange={handleChange}

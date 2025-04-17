@@ -12,6 +12,7 @@ export const useClientesStore = create((set) => ({
       const { data } = await api.get("/customers/listar", {
         params: filtros,
       });
+      await new Promise((resolve) => setTimeout(resolve, 3000)); // es aproposito poara que se vea bonito jaja
       set({ clientes: data });
     } catch (err) {
       console.error(err);
@@ -58,4 +59,21 @@ export const useClientesStore = create((set) => ({
       set({ cargando: false });
     }
   },
+  
+  eliminarCliente: async (id) => {
+    set({ cargando: true, error: null });
+    try {
+      await api.delete(`/customers/${id}`);
+      set((state) => ({
+        clientes: state.clientes.filter((cliente) => cliente.id !== id),
+      }));
+    } catch (err) {
+      console.error("Error al eliminar cliente:", err);
+      set({ error: "No se pudo eliminar el cliente" });
+    } finally {
+      set({ cargando: false });
+    }
+  },
+  
+  
 }));
