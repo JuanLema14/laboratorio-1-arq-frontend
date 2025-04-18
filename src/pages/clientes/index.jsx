@@ -200,13 +200,28 @@ const Clientes = () => {
                     <button
                       onClick={() => router.push(`/clientes/${cliente.id}`)}
                       className="px-3 py-1 bg-transparent text-primary hover:text-secondary hover:cursor-pointer"
+                      title="Editar cliente"
                     >
                       <Icon icon="material-symbols:edit" className="text-lg" />
                     </button>
 
                     <button
+                      onClick={() =>
+                        router.push(`/clientes/${cliente.id}/transacciones`)
+                      }
+                      className="px-3 py-1 bg-transparent text-primary hover:text-secondary hover:cursor-pointer"
+                      title="Ver transacciones"
+                    >
+                      <Icon
+                        icon="material-symbols:receipt-long-rounded"
+                        className="text-lg"
+                      />
+                    </button>
+
+                    <button
                       onClick={() => confirmarEliminacion(cliente)}
                       className="px-3 py-1 bg-transparent text-primary hover:text-secondary hover:cursor-pointer"
+                      title="Eliminar cliente"
                     >
                       <Icon
                         icon="material-symbols:delete"

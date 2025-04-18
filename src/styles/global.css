@@ -16,3 +16,23 @@ body,
   --color-gris: #9597a5;
   --color-fondo: #f3f4f9;
 }
+
+.diagonal-header {
+  position: relative;
+  background-color: #e5e5e5;
+  overflow: hidden;
+}
+
+.diagonal-header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -5vmax;
+  width: 40%;
+  height: 100%;
+  background-color: #b3dff9;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transform: skewX(-20deg);
+  transform-origin: top right;
+  z-index: 0;
+}
