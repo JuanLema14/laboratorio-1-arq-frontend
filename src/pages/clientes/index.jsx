@@ -23,7 +23,9 @@ const Clientes = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
-    const cleanValue = value.replace(/[^\d]/g, "");
+    const isBalanceField = name === "balanceMin" || name === "balanceMax";
+
+    const cleanValue = isBalanceField ? value.replace(/[^\d]/g, "") : value;
 
     setFiltros((prev) => ({
       ...prev,
