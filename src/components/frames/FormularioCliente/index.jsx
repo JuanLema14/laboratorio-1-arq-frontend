@@ -58,9 +58,15 @@ export default function FormularioCliente({
           placeholder="Nro. de cuenta"
           value={cliente.accountNumber}
           onChange={onChange}
-          className="px-4 py-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500"
+          readOnly={modo !== "crear"}
+          className={`px-4 py-3 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            modo !== "crear"
+              ? "bg-gray-100 text-gray-500 cursor-not-allowed"
+              : ""
+          }`}
           required
         />
+
         <input
           name="balance"
           placeholder="Saldo"
